@@ -1,27 +1,36 @@
 * {
     box-sizing: border-box;
 }
-.overbox {
+.overbox, .midlebox, .eventbox {
     margin: 10px 10px 10px 10px;
+}
+.overbox {
     background-color: #aeaeae;
     border: 5px solid green;
 }
 .profilbox {
     background-color: rebeccapurple;
-    width: 60px;
+    margin-left: 80%;
+    width: 120px;
     height: 60px;
+}
+.search, .profilbox {
+    display: inline-block;
+    vertical-align: top;
 }
 .midlebox {
     background-color: #aeaeae;
-    margin: 10px 10px 10px 10px;
-    width: 960px;
+    width: 70%;
     height: 760px;
     border: 5px solid blue;
 }
 .eventbox {
     background-color: #aeaeae;
-    margin: 10px 10px 10px 10px;
-    width: 100px;
-    height: 100px;
+    width: 27.5%;
+    height: 100%;
     border: 5px solid yellow;
+}
+.eventbox, .midlebox {
+    display: inline-block;
+    vertical-align: top;
 }
