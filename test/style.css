@@ -3,18 +3,26 @@
 }
 .overbox, .midlebox, .eventbox {
     margin: 10px 10px 10px 10px;
+    padding: 3px;
 }
 .overbox {
     background-color: #aeaeae;
     border: 5px solid green;
+    display: inline-block;
+    width: 98.9%;
+}
+.searchbox {
+    background-color: #00ffdd;
+    width: 500px;
+    height: 100px;
 }
 .profilbox {
     background-color: rebeccapurple;
-    margin-left: 80%;
+    margin-left: 65.5%;
     width: 120px;
     height: 60px;
 }
-.search, .profilbox {
+.searchbox, .profilbox {
     display: inline-block;
     vertical-align: top;
 }
@@ -27,7 +35,7 @@
 .eventbox {
     background-color: #aeaeae;
     width: 27.5%;
-    height: 100%;
+    height: 760px;
     border: 5px solid yellow;
 }
 .eventbox, .midlebox {
