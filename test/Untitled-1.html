@@ -5,9 +5,28 @@
         <title>test lootbug</title>
         <script>
             function tp_start(e)
-            {}
-            function start()
-            {}
+            {
+                let result = e.target.response;
+
+                let html = JSON.parse(result);
+
+                document.getElementById("1").innerHTML = html;
+            }
+            function start(url)
+            {
+                let oReq = new XMLHttpRequest();
+                oReq.onload = tp_start;
+                oReq.open("GET", url);
+                oReq.send();
+            }
+            function midlebox_script()
+            {
+                let _id = document.getElementById("input_search").value;
+                
+                let urle = '/cgi-bin/midlebox_script.py?id=' + _id;
+
+                start(urle);
+            }
         </script>
     </head>
     <body>
@@ -16,12 +35,30 @@
         <div class="overbox">
             <div class="searchbox">
                 <input id="input_search">
-                <button id="button_search">найти</button>
+                <button onclick="midlebox_script()" id="button_search">найти</button>
             </div>
             <div class="profilbox" id="profilbox"></div>
         </div>
         <div class="basicbox">
-            <div class="midlebox"><p>midlebox</p></div>
+            <div class="midlebox" id="1">
+                <p>midlebox</p>
+                <div class="projeckt">
+                    <img src="img\img.png" alt="" class='img' style="height: 100%; width: auto;">
+                    <div class="textonprojeckt">
+                        <p class='name'><b>название</b></p>
+                        <p class='comment'>коментарий-описание</p>
+                        <p class='price'>цена</p>
+                    </div>
+                </div>
+                <div class="projeckt">
+                    <img src="img\img1.png" alt="" class='img' style="height: 100%; width: auto;">
+                    <div class="textonprojeckt">
+                      <p class='name'><b>название</b></p>
+                      <p class='comment'>коментарий-описание</p>
+                      <p class='price'>цена</p>
+                    </div>
+                  </div>                  
+            </div>
             <div class="eventbox"><p>eventbox</p></div>
         </div>
     </body>
