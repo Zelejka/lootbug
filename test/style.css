@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+/* body {
+    background-color: #79c072d3;
+} */
 .overbox, .midlebox, .eventbox {
     margin: 10px 10px 10px 10px;
     padding: 3px;
@@ -26,6 +29,11 @@
     display: inline-block;
     vertical-align: top;
 }
+.basicbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .midlebox {
     background-color: #aeaeae;
     width: 70%;
@@ -44,11 +52,25 @@
     vertical-align: top;
 }
 .projeckt {
+    display: flex;
     background-color: green;
-    height: 150px;
+    height: 200px;
     margin-top: 10px;
 }
 .textonprojeckt, .img {
     display: inline-block;
     vertical-align: top;
+}
+.img {
+    margin: 5px 5px 5px 5px;
+    border: 2px solid #00ffdd;
+}
+.textonprojeckt {
+    border: 2px solid #00ffdd;
+    margin: 5px auto 5px 150px;
+    height: min-content;
+    width: max-content;
+}
+.textonprojeckt p {
+    text-align: center;
 }

@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(228, 79, 79);
+}
+.name {
+    display: inline-block;
+    margin-left: 100px;
+}
+.id {
+    position: absolute;
+    margin-bottom: 90%;
+}
+.script {
+    border: 3px solid black;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.288);
+}
