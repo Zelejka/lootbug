@@ -4,18 +4,18 @@
         <meta charset="UTF-8">
         <title>test lootbug</title>
         <script>
-            function tp_start(e)
+            function midlebox_script_result(e)
             {
                 let result = e.target.response;
 
                 let html = JSON.parse(result);
 
-                document.getElementById("1").innerHTML = html;
+                document.getElementById("midle_sc").innerHTML = html;
             }
-            function start(url)
+            function midlebox_script_start(url)
             {
                 let oReq = new XMLHttpRequest();
-                oReq.onload = tp_start;
+                oReq.onload = midlebox_script_result;
                 oReq.open("GET", url);
                 oReq.send();
             }
@@ -25,11 +25,39 @@
                 
                 let urle = '/cgi-bin/midlebox_script.py?id=' + _id;
 
-                start(urle);
+                midlebox_script_start(urle);
+            }
+        </script>
+        <script>
+            function profile_result(e)
+            {
+                let result = e.target.response;
+
+                let html = JSON.parse(result);
+
+                document.getElementById("profilbox").innerHTML = html;
+            }
+            function profile_start(url)
+            {
+                let oReq = new XMLHttpRequest();
+                oReq.onload = profile_result;
+                oReq.open("GET", url);
+                oReq.send();
+            }
+            function profile()
+            {
+                let _id = document.getElementById("input_search").value;
+                
+                let urle = '/cgi-bin/midlebox_script.py?id=' + _id;
+
+                profile_start(urle);
             }
         </script>
     </head>
     <body>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+        <link rel="stylesheet" href="style_fon.css">
         <link rel="stylesheet" href="style.min.css">
         <link rel="stylesheet" href="style.css">
         <div class="overbox">
@@ -37,13 +65,15 @@
                 <input id="input_search">
                 <button onclick="midlebox_script()" id="button_search">найти</button>
             </div>
-            <div class="profilbox" id="profilbox"></div>
+            <div class="profilbox" id="profilbox">
+                <button class="ui primary button" style="margin: 30px; margin-left: 130px;" onclick="profile()">обновить</button>
+            </div>
         </div>
         <div class="basicbox">
-            <div class="midlebox" id="1">
+            <div class="midlebox" id="midle_sc">
                 <p>midlebox</p>
                 <div class="projeckt">
-                    <img src="img\img.png" alt="" class='img' style="height: 95%; width: auto;">
+                    <img src="img\img.png" alt="" class='img'>
                     <div class="textonprojeckt">
                         <p class='name'><b>название</b></p>
                         <p class='comment'>коментарий-описание</p>
@@ -51,7 +81,7 @@
                     </div>
                 </div>
                 <div class="projeckt">
-                    <img src="img\img1.png" alt="" class='img' style="height: 95%; width: auto;">
+                    <img src="img\img1.png" alt="" class='img'>
                     <div class="textonprojeckt">
                       <p class='name'><b>название</b></p>
                       <p class='comment'>коментарий-описание</p>
@@ -62,5 +92,12 @@
             </div>
             <div class="eventbox"><p>eventbox</p></div>
         </div>
+        <div class="info">
+            <p><b>О бо мне:</b></p>
+            <p>мне 15 лет я учусь в 8 классе</p>
+            <p>этот сайт создан за 4 месяца</p>
+            <a href="http://127.0.0.1:8000/cgi-bin/project_script.py?project_id=1">подробнее</a>
+        </div>
+        <div class="otstup"></div>
     </body>
 </html>

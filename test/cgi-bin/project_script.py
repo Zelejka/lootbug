@@ -9,7 +9,7 @@ html = ''
 
 file_path = f'C:/Users/zelej/OneDrive/Документы/GitHub/lootbug/test/projects_script/project/text{proj}.txt'
 with open(file_path, 'rt', encoding='UTF-8') as file:
-    html += f'<p class="id">id_proj #{proj}</p><br>'
+    html += f'<p style="color: blue;">id_proj #{proj}</p><br>'
     html += file.read()
     html += '<br>'
 
@@ -27,9 +27,6 @@ body {
 .name {
     display: inline-block;
     margin-left: 40%;
-}
-.id {
-    color: blue;
 }
 .projeckt {
     background-color: green;

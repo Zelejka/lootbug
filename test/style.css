@@ -1,29 +1,37 @@
 * {
     box-sizing: border-box;
 }
-/* body {
-    background-color: #79c072d3;
-} */
-.overbox, .midlebox, .eventbox {
+.overbox, .midlebox, .eventbox, .projeckt, .searchbox, .img, .textonprojeckt, .info {
+    border-radius: 7px;
+}
+.overbox, .midlebox, .eventbox, .info {
     margin: 10px 10px 10px 10px;
-    padding: 3px;
+    padding: 5px;
+    background-color: #aeaeaea6;
 }
 .overbox {
-    background-color: #aeaeae;
-    border: 5px solid green;
-    display: inline-block;
+    display: flex;
+    flex-wrap: nowrap;
     width: 98.9%;
+    margin-top: 30px;
 }
 .searchbox {
     background-color: #00ffdd;
     width: 500px;
     height: 100px;
+    padding: 6px;
+    border-radius: 7px;
 }
 .profilbox {
     background-color: rebeccapurple;
-    margin-left: 65.5%;
-    width: 120px;
-    height: 60px;
+    border-radius: 7px;
+    margin-left: 50%;
+    width: 400px;
+    height: 100px;
+}
+.reserch_button {
+    margin: 40px;
+    margin-left: 150px;
 }
 .searchbox, .profilbox {
     display: inline-block;
@@ -35,17 +43,13 @@
     align-items: center;
 }
 .midlebox {
-    background-color: #aeaeae;
     width: 70%;
     height: 760px;
-    border: 5px solid blue;
-    overflow: auto
+    overflow: auto;
 }
 .eventbox {
-    background-color: #aeaeae;
     width: 27.5%;
     height: 760px;
-    border: 5px solid yellow;
 }
 .eventbox, .midlebox {
     display: inline-block;
@@ -64,13 +68,18 @@
 .img {
     margin: 5px 5px 5px 5px;
     border: 2px solid #00ffdd;
+    height: 95%;
+    width: auto;
 }
 .textonprojeckt {
     border: 2px solid #00ffdd;
-    margin: 5px auto 5px 150px;
+    margin: 5px auto 5px ;
     height: min-content;
     width: max-content;
 }
 .textonprojeckt p {
     text-align: center;
+}
+.otstup {
+    height: 20px;
 }

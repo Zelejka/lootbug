@@ -12,5 +12,15 @@ body {
 .script {
     border: 3px solid black;
     border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.288);
+    background-color: rgba(45, 177, 33, 0.288);
+}
+.proj {
+    border: 2px solid #aeaeae;
+    border-radius: 3px;
+    display: inline-block;
+    width: min-content;
+    padding: 5px 5px 5px 5px;
+}
+b {
+    margin-left: 100px;
 }

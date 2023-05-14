@@ -50,7 +50,7 @@ for j in range(count):
     # Формирование HTML-кода для текущей записи
     html += (f'''
         <div class="projeckt">
-            <img src="img/{img}.png" alt="" class='img' style="height: 100%; width: auto;">
+            <img src="img/{img}.png" alt="" class="img">
             <div class="textonprojeckt">
                 <p class='name'><b>{name}</b></p>
                 <p class='comment'>{comment}</p>
